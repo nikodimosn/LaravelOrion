@@ -1,14 +1,16 @@
 <?php
 
+use Orion\Facades\Orion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\PostsController;
-use App\Http\Controllers\Api\UserController;
-use App\Http\Controllers\PostCommentsController;
 use Orion\HTTP\Controllers\Controller;
-
-
-use Orion\Facades\Orion;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\PostsController;
+use App\Http\Controllers\Auth\LoginContrller;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\PostCommentsController;
 
 
 /*
@@ -34,6 +36,8 @@ Route::group(['as'=>'api.'],function(){
 
 
 
-})
+});
+
+Route::resource('postx',PostController::class);
 
 ?>

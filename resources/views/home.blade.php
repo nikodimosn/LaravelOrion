@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{Auth::user()->name}}'s Dashboard</div>
+                <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,16 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                   You are logged in!
-                </div>
-                <div class="card-body">
-                    <form action="{{route('home')}}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                        <input type="file" name="image">
-                        <input type="submit" value="Upload">
-                    </form>
+
+                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection

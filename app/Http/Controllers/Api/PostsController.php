@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 use App\Models\Post;
 use App\Http\Controllers\Api\PostsController;
 
-use Orion\HTTP\Controllers\Controller;
+use Orion\Http\Controllers\Controller;
 use Orion\Http\Requests\Request;
 
 
@@ -12,7 +12,7 @@ use Orion\Http\Requests\Request;
 class PostsController extends Controller
 {
     protected $model = Post::Class;
-    
+
     protected function afterSave(Request $request, $post)
     {
         $input = $request->all();
