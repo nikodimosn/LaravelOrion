@@ -69,7 +69,7 @@ async login(){
     await this.$auth.loginWith('laravelSanctum',{data:formData});
     console.log("user login");
 this.$router.push({
-    path:'/'
+    path:'/check'
     });
   }catch(err){
     console.log(err)
